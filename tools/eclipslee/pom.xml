@@ -51,7 +51,7 @@
 						<exclude>jtidy:jtidy</exclude>
 					</classpathExcludes>
 					<resolveTransitiveDependencies>true</resolveTransitiveDependencies>
-					<eclipseProjectName>slee-tools-eclipslee</eclipseProjectName>
+					<eclipseProjectName>slee-tool-eclipslee</eclipseProjectName>
 				</configuration>
 			</plugin>
 		</plugins>
