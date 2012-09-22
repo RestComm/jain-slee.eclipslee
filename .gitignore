@@ -24,6 +24,7 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
-# Mobicents
+# SLEE
+${release.dir}
 tools/eclipslee/docs/sources-mobicents/src/
 tools/eclipslee/docs/sources-telscale/src/
