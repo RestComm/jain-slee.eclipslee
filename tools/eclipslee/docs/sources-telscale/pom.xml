@@ -12,6 +12,7 @@
 	<properties>
 		<THIS.PLATFORM>Telscale</THIS.PLATFORM>
 		<JEE.PLATFORM>JBoss Application Server</JEE.PLATFORM>
+		<THIS.SOURCE_CODE_URL>https://code.google.com/p/jain-slee.eclipslee</THIS.SOURCE_CODE_URL>
 		<author.email.alexandre>amendonca (at) redhat.com</author.email.alexandre>
 	</properties>
 	
