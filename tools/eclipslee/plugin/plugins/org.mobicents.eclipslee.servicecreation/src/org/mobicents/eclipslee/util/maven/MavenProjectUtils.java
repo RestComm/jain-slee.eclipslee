@@ -82,17 +82,18 @@ public class MavenProjectUtils {
   static {
     MOBICENTS_PARENT.setGroupId("org.mobicents");
     MOBICENTS_PARENT.setArtifactId("mobicents-parent");
-    MOBICENTS_PARENT.setVersion("2.21");
+    MOBICENTS_PARENT.setVersion("6.1.2.GA-TelScale");
 
     JAIN_SLEE_DEPENDENCY.setGroupId("javax.slee");
     JAIN_SLEE_DEPENDENCY.setArtifactId("jain-slee");
     
     JAIN_SLEE_EXT_DEPENDENCY.setGroupId("org.mobicents.servers.jainslee.api");
     JAIN_SLEE_EXT_DEPENDENCY.setArtifactId("jain-slee-11-ext");
+    JAIN_SLEE_EXT_DEPENDENCY.setVersion("6.1.1.GA-TelScale");
 
     MOBICENTS_FT_RA_DEPENDENCY.setGroupId("org.mobicents.servers.jainslee.core");
     MOBICENTS_FT_RA_DEPENDENCY.setArtifactId("fault-tolerant-ra-api");
-    MOBICENTS_FT_RA_DEPENDENCY.setVersion("2.6.0.FINAL");
+    MOBICENTS_FT_RA_DEPENDENCY.setVersion("6.1.1.GA-TelScale");
   }
 
   public static void generateMavenPomFiles(IProject project, ProjectModules projectModules) {
@@ -128,7 +129,7 @@ public class MavenProjectUtils {
     model.setModelVersion("4.0.0");
     model.setPackaging("pom");
     
-    model.setDescription("JAIN SLEE Project created with Mobicents EclipSLEE v" + ServiceCreationPlugin.getDefault().getBundle().getHeaders().get(org.osgi.framework.Constants.BUNDLE_VERSION));
+    model.setDescription("JAIN SLEE Project created with Telscale EclipSLEE v" + ServiceCreationPlugin.getDefault().getBundle().getHeaders().get(org.osgi.framework.Constants.BUNDLE_VERSION));
 
     model.setParent(MOBICENTS_PARENT);
 
@@ -137,7 +138,7 @@ public class MavenProjectUtils {
     model.setArtifactId(project.getName() != null ? project.getName() : DEFAULT_ARTIFACT_ID);
     model.setVersion(DEFAULT_VERSION);
 
-    model.setName("Mobicents :: ${pom.artifactId} v${pom.version}");
+    model.setName("Telscale :: ${pom.artifactId} v${pom.version}");
 
     // Set child modules
     for(String module : projectModules.getModules()) {
@@ -179,11 +180,11 @@ public class MavenProjectUtils {
 
     model.setBuild(build);
 
-    // Add JBoss Repository so Mobicents Parent can be fetched...
+    // Add JBoss Repository so Telscale Parent can be fetched...
     Repository jbossRepo = new Repository();
-    jbossRepo.setId("jboss-public-repository-group");
-    jbossRepo.setName("JBoss Public Maven Repository Group");
-    jbossRepo.setUrl("https://repository.jboss.org/nexus/content/groups/public");
+    jbossRepo.setId("telscale-releases-repository");
+    jbossRepo.setName("TelScale Releases Repository");
+    jbossRepo.setUrl("http://telestax.artifactoryonline.com/telestax/releases");
     jbossRepo.setLayout("default");
 
     RepositoryPolicy jbossRepoRel = new RepositoryPolicy();
@@ -217,7 +218,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(EVENTS_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + (customName != null ? ("-" + customName) : "") + EVENTS_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${pom.artifactId} v${pom.version}");
+    model.setName("Telscale :: ${pom.artifactId} v${pom.version}");
 
     // Add JAIN SLEE Dependency
     addDependency(model, JAIN_SLEE_DEPENDENCY);
@@ -255,7 +256,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(SBB_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + (customName != null ? ("-" + customName) : "") + SBB_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${pom.artifactId} v${pom.version}");
+    model.setName("Telscale :: ${pom.artifactId} v${pom.version}");
 
     // Add JAIN SLEE Dependency
     addDependency(model, JAIN_SLEE_DEPENDENCY);
@@ -307,7 +308,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(PROFILE_SPEC_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + (customName != null ? ("-" + customName) : "") + PROFILE_SPEC_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${pom.artifactId} v${pom.version}");
+    model.setName("Telscale :: ${pom.artifactId} v${pom.version}");
 
     // Add JAIN SLEE Dependency
     addDependency(model, JAIN_SLEE_DEPENDENCY);
@@ -344,7 +345,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(RA_TYPE_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + (customName != null ? ("-" + customName) : "") + RA_TYPE_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${pom.artifactId} v${pom.version}");
+    model.setName("Telscale :: ${pom.artifactId} v${pom.version}");
 
     // Add JAIN SLEE Dependency
     addDependency(model, JAIN_SLEE_DEPENDENCY);
@@ -389,7 +390,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(RA_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + (customName != null ? ("-" + customName) : "") + RA_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${pom.artifactId} v${pom.version}");
+    model.setName("Telscale :: ${pom.artifactId} v${pom.version}");
 
     // Add JAIN SLEE Dependency
     addDependency(model, JAIN_SLEE_DEPENDENCY);
@@ -429,7 +430,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(LIBRARY_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + (customName != null ? ("-" + customName) : "") + LIBRARY_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${pom.artifactId} v${pom.version}");
+    model.setName("Telscale :: ${pom.artifactId} v${pom.version}");
 
     // Add build
     Build build = new Build();
@@ -484,7 +485,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(DEPLOYABLE_UNIT_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + DEPLOYABLE_UNIT_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${pom.artifactId} v${pom.version}");
+    model.setName("Telscale :: ${pom.artifactId} v${pom.version}");
 
     // Add other modules as dependencies
     for(String projectModule : projectModules.getModules()) {
