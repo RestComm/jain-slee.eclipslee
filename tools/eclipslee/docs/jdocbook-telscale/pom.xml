@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>eclipslee-docs</artifactId>
 		<groupId>org.mobicents.servers.jainslee.tools</groupId>
-		<version>6.1.0-TelScale-SNAPSHOT</version>
+		<version>6.1.1.GA-TelScale</version>
 	</parent>
 	
 	<artifactId>eclipslee-docs-jdocbook-telscale</artifactId>
