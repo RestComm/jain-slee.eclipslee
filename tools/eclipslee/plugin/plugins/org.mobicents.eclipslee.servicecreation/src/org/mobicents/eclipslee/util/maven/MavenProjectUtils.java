@@ -137,7 +137,7 @@ public class MavenProjectUtils {
     model.setArtifactId(project.getName() != null ? project.getName() : DEFAULT_ARTIFACT_ID);
     model.setVersion(DEFAULT_VERSION);
 
-    model.setName("Mobicents :: ${pom.artifactId} v${pom.version}");
+    model.setName("Mobicents :: ${project.artifactId} v${project.version}");
 
     // Set child modules
     for(String module : projectModules.getModules()) {
@@ -217,7 +217,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(EVENTS_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + (customName != null ? ("-" + customName) : "") + EVENTS_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${pom.artifactId} v${pom.version}");
+    model.setName("Mobicents :: ${project.artifactId} v${project.version}");
 
     // Add JAIN SLEE Dependency
     addDependency(model, JAIN_SLEE_DEPENDENCY);
@@ -232,7 +232,7 @@ public class MavenProjectUtils {
         Dependency dependency = new Dependency();
         dependency.setGroupId(parent.getGroupId());
         dependency.setArtifactId(LIBRARY_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + LIBRARY_MODULE_ARTIFACT_ID_SUFFIX);
-        dependency.setVersion("1.0"); // FIXME dependency.setVersion(parent.getVersion()); // FIXME dependency.setVersion("${pom.version}");
+        dependency.setVersion("1.0"); // FIXME dependency.setVersion(parent.getVersion()); // FIXME dependency.setVersion("${project.version}");
         model.addDependency(dependency);
       }
     }
@@ -255,7 +255,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(SBB_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + (customName != null ? ("-" + customName) : "") + SBB_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${pom.artifactId} v${pom.version}");
+    model.setName("Mobicents :: ${project.artifactId} v${project.version}");
 
     // Add JAIN SLEE Dependency
     addDependency(model, JAIN_SLEE_DEPENDENCY);
@@ -269,7 +269,7 @@ public class MavenProjectUtils {
         Dependency dependency = new Dependency();
         dependency.setGroupId(parent.getGroupId());
         dependency.setArtifactId(LIBRARY_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + LIBRARY_MODULE_ARTIFACT_ID_SUFFIX);
-        dependency.setVersion(parent.getVersion()); // FIXME dependency.setVersion("${pom.version}");
+        dependency.setVersion(parent.getVersion()); // FIXME dependency.setVersion("${project.version}");
         model.addDependency(dependency);
       }
 
@@ -277,7 +277,7 @@ public class MavenProjectUtils {
         Dependency dependency = new Dependency();
         dependency.setGroupId(parent.getGroupId());
         dependency.setArtifactId(EVENTS_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + EVENTS_MODULE_ARTIFACT_ID_SUFFIX);
-        dependency.setVersion(parent.getVersion()); // FIXME dependency.setVersion("${pom.version}");
+        dependency.setVersion(parent.getVersion()); // FIXME dependency.setVersion("${project.version}");
         model.addDependency(dependency);
       }
 
@@ -285,7 +285,7 @@ public class MavenProjectUtils {
         Dependency dependency = new Dependency();
         dependency.setGroupId(parent.getGroupId());
         dependency.setArtifactId(PROFILE_SPEC_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + PROFILE_SPEC_MODULE_ARTIFACT_ID_SUFFIX);
-        dependency.setVersion(parent.getVersion()); // FIXME dependency.setVersion("${pom.version}");
+        dependency.setVersion(parent.getVersion()); // FIXME dependency.setVersion("${project.version}");
         model.addDependency(dependency);
       }
     }
@@ -307,7 +307,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(PROFILE_SPEC_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + (customName != null ? ("-" + customName) : "") + PROFILE_SPEC_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${pom.artifactId} v${pom.version}");
+    model.setName("Mobicents :: ${project.artifactId} v${project.version}");
 
     // Add JAIN SLEE Dependency
     addDependency(model, JAIN_SLEE_DEPENDENCY);
@@ -321,7 +321,7 @@ public class MavenProjectUtils {
         Dependency dependency = new Dependency();
         dependency.setGroupId(parent.getGroupId());
         dependency.setArtifactId(LIBRARY_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + LIBRARY_MODULE_ARTIFACT_ID_SUFFIX);
-        dependency.setVersion(parent.getVersion()); // FIXME dependency.setVersion("${pom.version}");
+        dependency.setVersion(parent.getVersion()); // FIXME dependency.setVersion("${project.version}");
         model.addDependency(dependency);
       }
     }
@@ -344,7 +344,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(RA_TYPE_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + (customName != null ? ("-" + customName) : "") + RA_TYPE_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${pom.artifactId} v${pom.version}");
+    model.setName("Mobicents :: ${project.artifactId} v${project.version}");
 
     // Add JAIN SLEE Dependency
     addDependency(model, JAIN_SLEE_DEPENDENCY);
@@ -359,7 +359,7 @@ public class MavenProjectUtils {
         Dependency dependency = new Dependency();
         dependency.setGroupId(parent.getGroupId());
         dependency.setArtifactId(LIBRARY_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + LIBRARY_MODULE_ARTIFACT_ID_SUFFIX);
-        dependency.setVersion(parent.getVersion()); // FIXME dependency.setVersion("${pom.version}");
+        dependency.setVersion(parent.getVersion()); // FIXME dependency.setVersion("${project.version}");
         model.addDependency(dependency);
       }
 
@@ -367,7 +367,7 @@ public class MavenProjectUtils {
         Dependency dependency = new Dependency();
         dependency.setGroupId(parent.getGroupId());
         dependency.setArtifactId(parent.getArtifactId() + "-events");
-        dependency.setVersion(parent.getVersion()); // FIXME dependency.setVersion("${pom.version}");
+        dependency.setVersion(parent.getVersion()); // FIXME dependency.setVersion("${project.version}");
         model.addDependency(dependency);
       }
     }
@@ -389,7 +389,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(RA_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + (customName != null ? ("-" + customName) : "") + RA_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${pom.artifactId} v${pom.version}");
+    model.setName("Mobicents :: ${project.artifactId} v${project.version}");
 
     // Add JAIN SLEE Dependency
     addDependency(model, JAIN_SLEE_DEPENDENCY);
@@ -405,7 +405,7 @@ public class MavenProjectUtils {
         Dependency dependency = new Dependency();
         dependency.setGroupId(parent.getGroupId());
         dependency.setArtifactId(parent.getArtifactId() + "-ratype");
-        dependency.setVersion(parent.getVersion()); // FIXME dependency.setVersion("${pom.version}");
+        dependency.setVersion(parent.getVersion()); // FIXME dependency.setVersion("${project.version}");
         model.addDependency(dependency);
       }
     }
@@ -429,7 +429,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(LIBRARY_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + (customName != null ? ("-" + customName) : "") + LIBRARY_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${pom.artifactId} v${pom.version}");
+    model.setName("Mobicents :: ${project.artifactId} v${project.version}");
 
     // Add build
     Build build = new Build();
@@ -484,7 +484,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(DEPLOYABLE_UNIT_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + DEPLOYABLE_UNIT_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${pom.artifactId} v${pom.version}");
+    model.setName("Mobicents :: ${project.artifactId} v${project.version}");
 
     // Add other modules as dependencies
     for(String projectModule : projectModules.getModules()) {
@@ -492,7 +492,7 @@ public class MavenProjectUtils {
         Dependency dependency = new Dependency();
         dependency.setGroupId(parent.getGroupId());
         dependency.setArtifactId(parent.getArtifactId() + "-" + projectModule);
-        dependency.setVersion(parent.getVersion()); // FIXME dependency.setVersion("${pom.version}");
+        dependency.setVersion(parent.getVersion()); // FIXME dependency.setVersion("${project.version}");
         model.addDependency(dependency);
       }
     }
