@@ -920,6 +920,7 @@
       </objectContribution>
     </extension>
     
+	<!-- Disable JAIN SLEE Components Import, not implemented
 	<extension point="org.eclipse.ui.importWizards">
 		<wizard id="org.mobicents.eclipslee.servicecreation.importing.wizard.ImportSLEEComponentsWizard" 
 			name="JAIN SLEE Components"
@@ -931,7 +932,7 @@
 			<selection class="org.eclipse.core.resources.IResource"/>
 		</wizard>
 	</extension>
-	
+	-->
 		
     <extension
        id="org.mobicents.sbb.graph.view.ext"
