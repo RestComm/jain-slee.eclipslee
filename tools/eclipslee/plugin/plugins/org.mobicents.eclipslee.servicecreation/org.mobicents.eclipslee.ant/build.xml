@@ -24,7 +24,7 @@
 	
   <target name="build-ant-tasks" depends="init">
     <mkdir dir="bin"/>
-    <javac classpath="${ant.home}/lib/ant.jar" srcdir="src" destdir="bin" deprecation="off" includes="org/mobicents/eclipslee/**/*.java"/>
+    <javac classpath="${ant.home}/lib/ant.jar" srcdir="src" destdir="bin" deprecation="off" includes="org/restcomm/eclipslee/**/*.java"/>
   </target>
 	
   <target name="package-ant-tasks" depends="init,build-ant-tasks">

@@ -60,7 +60,7 @@ public class SLEEEntityResolver implements EntityResolver {
         // Alcatel enhancements
         { "-//Alcatel OSP//DTD JAIN SLEE Resource Adaptor Instance 1.0//EN", "http://www.etb.bel.alcatel.be/dtd/resource-adaptor-instances-jar_1_0.dtd", "resource-adaptor-instances-jar_1_0.dtd", "dummy-resource-adaptor-instances.xml"},
 
-        // Mobicents enhancements
+        // Restcomm enhancements
         { "-//Red Hat, Inc.//DTD JAIN SLEE Deploy Config 1.1//EN", "http://www.mobicents.org/slee/dtd/deploy-config_1_1.dtd", "deploy-config_1_1.dtd", "dummy-deploy-config.xml"}
         };
 

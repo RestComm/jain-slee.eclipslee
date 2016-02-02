@@ -75,7 +75,7 @@ public class DeleteMavenDependencyAction implements IObjectActionDelegate {
         public void run(IProgressMonitor monitor) { 
           monitor.beginTask("Updating classpath. This may take a few seconds ...", 100);
           mavenResult = null; // clear
-          mavenResult = MavenProjectUtils.runMavenTask(pomFile.getProject().getFile("pom.xml"), new String[]{"mobicents:eclipse"}, monitor);
+          mavenResult = MavenProjectUtils.runMavenTask(pomFile.getProject().getFile("pom.xml"), new String[]{"restcomm:eclipse"}, monitor);
           monitor.done(); 
         } 
       });
@@ -143,10 +143,10 @@ public class DeleteMavenDependencyAction implements IObjectActionDelegate {
           }
         }
 
-        // let's try with mobicents:eclipse
+        // let's try with restcomm:eclipse
         runMobicentsEclipsePlugin();
 
-        // Fallback to manually created since mobicents:eclipse failed
+        // Fallback to manually created since restcomm:eclipse failed
         if(mavenResult == null || mavenResult.hasExceptions()) {
           javaProject.setRawClasspath(cpList.toArray(new IClasspathEntry[cpList.size()]), monitor);
         }

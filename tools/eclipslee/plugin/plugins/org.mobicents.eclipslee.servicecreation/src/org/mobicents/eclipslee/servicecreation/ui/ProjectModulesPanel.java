@@ -78,7 +78,7 @@ public class ProjectModulesPanel extends Composite {
     Group sleeExtGroup = new Group(this, SWT.SHADOW_ETCHED_IN);
     sleeExtGroup.setText("Extensions");
     sleeExtCheckbox = new Button(sleeExtGroup, SWT.CHECK);
-    sleeExtCheckbox.setText("Use Mobicents JAIN SLEE 1.1 Extensions");
+    sleeExtCheckbox.setText("Use Restcomm JAIN SLEE 1.1 Extensions");
     sleeExtCheckbox.setSelection(true);
     sleeExtCheckbox.pack();
 

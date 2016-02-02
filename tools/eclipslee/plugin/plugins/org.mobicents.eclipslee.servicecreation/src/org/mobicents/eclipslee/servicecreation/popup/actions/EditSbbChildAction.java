@@ -72,7 +72,7 @@ public class EditSbbChildAction  implements IActionDelegate {
 			
 			try {
 				
-	      // Are we using Mobicents JAIN SLEE 1.1 Extensions ?
+	      // Are we using Restcomm JAIN SLEE 1.1 Extensions ?
 	      boolean useExt = MavenProjectUtils.useExtensions(abstractFile.getProject());
 
 	      IProgressMonitor monitor = null;

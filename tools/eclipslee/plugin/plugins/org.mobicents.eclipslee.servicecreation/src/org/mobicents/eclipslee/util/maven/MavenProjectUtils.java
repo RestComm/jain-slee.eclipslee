@@ -40,7 +40,7 @@ public class MavenProjectUtils {
   // Constants -----------------------------------------------------------
 
   private static final String DEFAULT_GROUP_ID = "org.mobicents";
-  private static final String DEFAULT_ARTIFACT_ID = "mobicents-example";
+  private static final String DEFAULT_ARTIFACT_ID = "restcomm-example";
   private static final String DEFAULT_VERSION = "1.0";
 
   private static final String EVENTS_MODULE_ARTIFACT_ID_PREFIX = "";
@@ -73,16 +73,16 @@ public class MavenProjectUtils {
   private static final String DU_PLUGIN_GROUP_ID = "org.mobicents.tools";
   private static final String DU_PLUGIN_ARTIFACT_ID = "maven-du-plugin";
 
-  private static final Parent MOBICENTS_PARENT = new Parent();
+  private static final Parent RESTCOMM_PARENT = new Parent();
 
   private static final Dependency JAIN_SLEE_DEPENDENCY = new Dependency();
   private static final Dependency JAIN_SLEE_EXT_DEPENDENCY = new Dependency();
-  private static final Dependency MOBICENTS_FT_RA_DEPENDENCY = new Dependency();
+  private static final Dependency RESTCOMM_FT_RA_DEPENDENCY = new Dependency();
 
   static {
-    MOBICENTS_PARENT.setGroupId("org.mobicents");
-    MOBICENTS_PARENT.setArtifactId("mobicents-parent");
-    MOBICENTS_PARENT.setVersion("2.21");
+    RESTCOMM_PARENT.setGroupId("org.mobicents");
+    RESTCOMM_PARENT.setArtifactId("restcomm-parent");
+    RESTCOMM_PARENT.setVersion("2.21");
 
     JAIN_SLEE_DEPENDENCY.setGroupId("javax.slee");
     JAIN_SLEE_DEPENDENCY.setArtifactId("jain-slee");
@@ -90,9 +90,9 @@ public class MavenProjectUtils {
     JAIN_SLEE_EXT_DEPENDENCY.setGroupId("org.mobicents.servers.jainslee.api");
     JAIN_SLEE_EXT_DEPENDENCY.setArtifactId("jain-slee-11-ext");
 
-    MOBICENTS_FT_RA_DEPENDENCY.setGroupId("org.mobicents.servers.jainslee.core");
-    MOBICENTS_FT_RA_DEPENDENCY.setArtifactId("fault-tolerant-ra-api");
-    MOBICENTS_FT_RA_DEPENDENCY.setVersion("2.6.0.FINAL");
+    RESTCOMM_FT_RA_DEPENDENCY.setGroupId("org.mobicents.servers.jainslee.core");
+    RESTCOMM_FT_RA_DEPENDENCY.setArtifactId("fault-tolerant-ra-api");
+    RESTCOMM_FT_RA_DEPENDENCY.setVersion("2.6.0.FINAL");
   }
 
   public static void generateMavenPomFiles(IProject project, ProjectModules projectModules) {
@@ -128,9 +128,9 @@ public class MavenProjectUtils {
     model.setModelVersion("4.0.0");
     model.setPackaging("pom");
     
-    model.setDescription("JAIN SLEE Project created with Mobicents EclipSLEE v" + ServiceCreationPlugin.getDefault().getBundle().getHeaders().get(org.osgi.framework.Constants.BUNDLE_VERSION));
+    model.setDescription("JAIN SLEE Project created with Restcomm EclipSLEE v" + ServiceCreationPlugin.getDefault().getBundle().getHeaders().get(org.osgi.framework.Constants.BUNDLE_VERSION));
 
-    model.setParent(MOBICENTS_PARENT);
+    model.setParent(RESTCOMM_PARENT);
 
     // TODO: Ask for these values in wizard?
     model.setGroupId(DEFAULT_GROUP_ID);
@@ -144,7 +144,7 @@ public class MavenProjectUtils {
       model.addModule(module);
     }
 
-    // Add mobicents:eclipse plugin
+    // Add restcomm:eclipse plugin
     Build build = new Build();
 
     Plugin mobicentsEclipsePlugin = new Plugin();
@@ -179,7 +179,7 @@ public class MavenProjectUtils {
 
     model.setBuild(build);
 
-    // Add JBoss Repository so Mobicents Parent can be fetched...
+    // Add JBoss Repository so Restcomm Parent can be fetched...
     Repository jbossRepo = new Repository();
     jbossRepo.setId("jboss-public-repository-group");
     jbossRepo.setName("JBoss Public Maven Repository Group");
@@ -393,7 +393,7 @@ public class MavenProjectUtils {
 
     // Add JAIN SLEE Dependency
     addDependency(model, JAIN_SLEE_DEPENDENCY);
-    addDependency(model, MOBICENTS_FT_RA_DEPENDENCY);
+    addDependency(model, RESTCOMM_FT_RA_DEPENDENCY);
     // Not needed so far ...
     // if(useExtensions(project)) {
     //   addDependency(model, JAIN_SLEE_EXT_DEPENDENCY);
@@ -652,7 +652,7 @@ public class MavenProjectUtils {
       req.setCacheTransferError(false); // enables to fetch remotely ?
       result = maven.execute(req, monitor);
       for(String goal : goals) {
-        if(goal.equals("mobicents:eclipse")) {
+        if(goal.equals("restcomm:eclipse")) {
           fixProjectNature(pom.getProject());
         }
       }

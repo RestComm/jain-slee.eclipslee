@@ -10,19 +10,19 @@
 
 	<section id="general_config">
 		<title>General Configuration</title>
-		<para>Currently there are no general configurations for the plugin. When they are available they can be accessed by going to <menuchoice><guimenu>Preferences</guimenu><guisubmenu>Mobicents EclipSLEE</guisubmenu></menuchoice></para>
+		<para>Currently there are no general configurations for the plugin. When they are available they can be accessed by going to <menuchoice><guimenu>Preferences</guimenu><guisubmenu>Restcomm EclipSLEE</guisubmenu></menuchoice></para>
 	</section>
 	<section id="component_template_configuration">
 		<title>Component Templates Configuration</title>
-		<para>It is possible to customize the list of component presented when adding a new Maven dependency (see <xref linkend="adding_new_maven_dependency"/>). This configuration can be made in Eclipse preferences <menuchoice><guimenu>Mobicents EclipSLEE</guimenu><guisubmenu>Component Templates</guisubmenu></menuchoice>.
+		<para>It is possible to customize the list of component presented when adding a new Maven dependency (see <xref linkend="adding_new_maven_dependency"/>). This configuration can be made in Eclipse preferences <menuchoice><guimenu>Restcomm EclipSLEE</guimenu><guisubmenu>Component Templates</guisubmenu></menuchoice>.
 			<figure>
-				<title>Mobicents EclipSLEE Component Templates Configuration</title>
+				<title>Restcomm EclipSLEE Component Templates Configuration</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata width="100%" align="center" fileref="images/img-eclipslee_component_templates_config.png" format="PNG"/>
 					</imageobject>
 					<textobject>
-						<para>Mobicents EclipSLEE Component Templates Configuration</para>
+						<para>Restcomm EclipSLEE Component Templates Configuration</para>
 					</textobject>
 				</mediaobject>
 			</figure>

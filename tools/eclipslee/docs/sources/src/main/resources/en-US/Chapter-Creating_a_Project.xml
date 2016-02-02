@@ -52,7 +52,7 @@
 			</figure>
 		</para>
 		<para>
-			Choose the desired project modules to be created, from the list, as shown below. It is possible to select from pre-defined High Level component types, with proper component enabled and selected, or to use a custom configuration to freely select the components. The proper Maven modules will be created according to the selection, as well as the Deployable Unit descriptor. You can also opt for using the Mobicents JAIN SLEE 1.1 specific extensions. You can find more information about these extensions on the Mobicents JAIN SLEE User Guide.
+			Choose the desired project modules to be created, from the list, as shown below. It is possible to select from pre-defined High Level component types, with proper component enabled and selected, or to use a custom configuration to freely select the components. The proper Maven modules will be created according to the selection, as well as the Deployable Unit descriptor. You can also opt for using the Restcomm JAIN SLEE 1.1 specific extensions. You can find more information about these extensions on the Restcomm JAIN SLEE User Guide.
 			<figure>
 				<title>Selecting Modules for the JAIN SLEE Project</title>
 				<mediaobject>
@@ -206,7 +206,7 @@
 	<section id="managing_project_dependencies">
 		<title>Managing Project Dependencies</title>
 		<para>
-			Maven dependencies for each module can be added or removed using EclipSLEE. After these dependencies are added, the classpath is updated by running the Maven mobicents:eclipse target.
+			Maven dependencies for each module can be added or removed using EclipSLEE. After these dependencies are added, the classpath is updated by running the Maven restcomm:eclipse target.
 		</para>
 		<para>
 			The entries in the classpath are not only used for the usual project classpath but also for allowing the plugin to find available JAIN SLEE Components for the wizards, to be used in the project, such as Events, RA Types and SBBs relative to the platform Resource Adaptors and Enablers.
@@ -244,7 +244,7 @@
 						</textobject>
 					</mediaobject>
 				</figure>
-				You can also use the <guilabel>Component</guilabel> drop-down menu to pick the component Group Id, Artifact and Version from the provided templates. By default it contains the components shipped with the latest Mobicents JAIN SLEE release but it can be customized in the Plugin preferences. See <xref linkend="component_template_configuration" /> for more information.
+				You can also use the <guilabel>Component</guilabel> drop-down menu to pick the component Group Id, Artifact and Version from the provided templates. By default it contains the components shipped with the latest Restcomm JAIN SLEE release but it can be customized in the Plugin preferences. See <xref linkend="component_template_configuration" /> for more information.
 			</para>
 			<para>
 				Click on <guibutton>Finish</guibutton> and the new dependency will be added to the module's pom file and, if selected, the classpath updated with the new entry.

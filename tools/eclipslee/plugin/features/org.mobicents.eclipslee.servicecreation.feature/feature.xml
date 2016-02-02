@@ -6,7 +6,7 @@
       provider-name="Mobicents">
 
    <description>
-	EclipSLEE is a Mobicents sub-project, which provides a set of Eclipse plug-ins that increase the development productivity when writing SLEE applications.
+	EclipSLEE is a Restcomm sub-project, which provides a set of Eclipse plug-ins that increase the development productivity when writing SLEE applications.
    </description>
 
    <copyright>

@@ -191,7 +191,7 @@ public class AddMavenDependencyAction implements IObjectActionDelegate {
           public void run(IProgressMonitor monitor) { 
             monitor.beginTask("Updating classpath. This may take a few seconds ...", 100);
             mavenResult = null; // clear
-            mavenResult = MavenProjectUtils.runMavenTask(project.getFile("pom.xml"), new String[]{"mobicents:eclipse"}, monitor);
+            mavenResult = MavenProjectUtils.runMavenTask(project.getFile("pom.xml"), new String[]{"restcomm:eclipse"}, monitor);
             monitor.done(); 
           } 
         });
@@ -237,10 +237,10 @@ public class AddMavenDependencyAction implements IObjectActionDelegate {
               // Copy contents from the first array to the extended array
               System.arraycopy(classpath, 0, extendedCP, 0, classpath.length);
 
-              // let's try with mobicents:eclipse
+              // let's try with restcomm:eclipse
               runMobicentsEclipsePlugin();
 
-              // Fallback to manually created since mobicents:eclipse failed
+              // Fallback to manually created since restcomm:eclipse failed
               if(mavenResult == null || mavenResult.hasExceptions()) {
                 javaProject.setRawClasspath(extendedCP, null);
               }

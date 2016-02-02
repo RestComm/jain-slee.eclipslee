@@ -67,7 +67,7 @@
 			Name the Resource Adaptor; the name must end with "<filename>ResourceAdaptor.java</filename>".
 		</para>
 		<para>
-			If you wish to develop a Fault Tolerant Resource Adaptor, by making use of the Mobicents specific <classname>FaultTolerantResourceAdaptor</classname> interface, check the <guibutton>Fault Tolerant Resource Adaptor</guibutton> checkbox. When done, click <guibutton>Next</guibutton> to go to the component identity dialog, pictured below:
+			If you wish to develop a Fault Tolerant Resource Adaptor, by making use of the Restcomm specific <classname>FaultTolerantResourceAdaptor</classname> interface, check the <guibutton>Fault Tolerant Resource Adaptor</guibutton> checkbox. When done, click <guibutton>Next</guibutton> to go to the component identity dialog, pictured below:
 			<figure>
 				<title>JAIN SLEE Component Identity dialog in EclipSLEE</title>
 				<mediaobject>

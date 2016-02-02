@@ -165,7 +165,7 @@ public class SbbWizard extends BaseWizard {
 			if (createACI) stages++;
 			monitor.beginTask("Creating SBB: " + sbbBaseName, stages);
 
-			// Are we using Mobicents JAIN SLEE 1.1 Extensions ?
+			// Are we using Restcomm JAIN SLEE 1.1 Extensions ?
 			boolean useExt = MavenProjectUtils.useExtensions(getSourceContainer().getProject());
 			
 			// Substitution map
@@ -174,13 +174,13 @@ public class SbbWizard extends BaseWizard {
 			subs.put("__PACKAGE__", Utils.getPackageTemplateValue(getPackageName()));
 			
 			if(useExt) {
-        subs.put("__IMPORT_MOBICENTS_EXTENSIONS__", "import org.mobicents.slee.*;\n");
+        subs.put("__IMPORT_RESTCOMM_EXTENSIONS__", "import org.mobicents.slee.*;\n");
         subs.put("__SBB_LOCAL_OBJECT_IMPORTS__", "import org.mobicents.slee.*;");
         subs.put("__EXT_SUFFIX__", "Ext");
         subs.put("__SBB_CONTEXT_EXT_CAST__", "(SbbContextExt) ");
 			}
 			else {
-        subs.put("__IMPORT_MOBICENTS_EXTENSIONS__", "");
+        subs.put("__IMPORT_RESTCOMM_EXTENSIONS__", "");
         subs.put("__SBB_LOCAL_OBJECT_IMPORTS__", "import javax.slee.SbbLocalObject;");
         subs.put("__EXT_SUFFIX__", "");
         subs.put("__SBB_CONTEXT_EXT_CAST__", "");
@@ -237,7 +237,7 @@ public class SbbWizard extends BaseWizard {
 				subs.put("__BUSINESS_IFACE_NAME__", ", " + sbbBaseName);
 			}
 			else {
-			  // Workaround for http://code.google.com/p/mobicents/issues/detail?id=2548, always implement this
+			  // Workaround for http://code.google.com/p/restcomm/issues/detail?id=2548, always implement this
         subs.put("__BUSINESS_IFACE_NAME__", ", " + sbbBaseName);
 			}
 			
@@ -446,7 +446,7 @@ public class SbbWizard extends BaseWizard {
 			abstractFile = FileUtil.createFromTemplate(folder, new Path(getFileName()), new Path(SBB_TEMPLATE), subs, monitor);
 			monitor.worked(1);
 			
-			// Always create business interface (see http://code.google.com/p/mobicents/issues/detail?id=2548)
+			// Always create business interface (see http://code.google.com/p/restcomm/issues/detail?id=2548)
       businessFile = FileUtil.createFromTemplate(folder, new Path(businessFilename), new Path(SBB_BUSINESS_TEMPLATE), subs, monitor);
 
       // Create the SBB local interface file.

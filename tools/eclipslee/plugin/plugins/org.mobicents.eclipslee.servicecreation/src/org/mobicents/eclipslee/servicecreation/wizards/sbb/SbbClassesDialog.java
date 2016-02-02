@@ -45,7 +45,7 @@ public class SbbClassesDialog extends Dialog {
 		panel = new SbbClassesPanel(composite, 0);
 		panel.createSbbLocalObject(createLocalInterface);
 		panel.createActivityContextInterface(createActivityContextInterface);
-		// ammendonca: See http://code.google.com/p/mobicents/issues/detail?id=2548
+		// ammendonca: See http://code.google.com/p/restcomm/issues/detail?id=2548
 		// panel.disableSbbLocalObject(true);
 		composite.setSize(640, 480);
 		return composite;

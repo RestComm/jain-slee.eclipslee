@@ -287,14 +287,14 @@ public class AddModuleAction implements IObjectActionDelegate {
             extendedCP[isAdded ? i+2 : i] = cpEntry;
           }
 
-          // Let's try updating with mobicents:eclipse
+          // Let's try updating with restcomm:eclipse
           try {
             ProgressMonitorDialog dialog = new ProgressMonitorDialog(getShell()); 
             dialog.run(true, false, new IRunnableWithProgress(){ 
               public void run(IProgressMonitor monitor) { 
                 monitor.beginTask("Updating classpath. This may take a few seconds ...", 100);
                 mavenResult = null;
-                mavenResult = MavenProjectUtils.runMavenTask(project.getFile("pom.xml"), new String[]{"mobicents:eclipse"}, monitor);
+                mavenResult = MavenProjectUtils.runMavenTask(project.getFile("pom.xml"), new String[]{"restcomm:eclipse"}, monitor);
                 monitor.done(); 
               } 
             });
@@ -302,7 +302,7 @@ public class AddModuleAction implements IObjectActionDelegate {
           catch (Exception e) {
             // ignore
           }
-          // Fallback to manually created since mobicents:eclipse failed
+          // Fallback to manually created since restcomm:eclipse failed
           if(mavenResult == null || mavenResult.hasExceptions()) {
             javaProject.setRawClasspath(extendedCP, null);
           }

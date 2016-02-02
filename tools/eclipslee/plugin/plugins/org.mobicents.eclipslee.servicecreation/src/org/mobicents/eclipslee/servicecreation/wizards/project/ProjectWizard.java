@@ -69,10 +69,10 @@ public class ProjectWizard extends Wizard implements INewWizard {
   private static final IPath SLEE_JAR = SLEE_1_1_JAR;
 
   private static final String SLEE_EXT_1_1_VERSION = "1.0.0.FINAL";
-  private static final IPath SLEE_EXT_1_1_JAR = new Path("M2_REPO/org/mobicents/servers/jainslee/api/jain-slee-11-ext/" + SLEE_EXT_1_1_VERSION + "/jain-slee-11-ext-" + SLEE_EXT_1_1_VERSION + ".jar");
+  private static final IPath SLEE_EXT_1_1_JAR = new Path("M2_REPO/org/restcomm/servers/jainslee/api/jain-slee-11-ext/" + SLEE_EXT_1_1_VERSION + "/jain-slee-11-ext-" + SLEE_EXT_1_1_VERSION + ".jar");
 
-  private static final String MOBICENTS_FT_RA_VERSION = "2.7.0.FINAL";
-  private static final IPath MOBICENTS_FT_RA_JAR = new Path("M2_REPO/org/mobicents/servers/jainslee/core/fault-tolerant-ra-api/" + MOBICENTS_FT_RA_VERSION + "/fault-tolerant-ra-api-" + MOBICENTS_FT_RA_VERSION + ".jar");
+  private static final String RESTCOMM_FT_RA_VERSION = "2.7.0.FINAL";
+  private static final IPath RESTCOMM_FT_RA_JAR = new Path("M2_REPO/org/restcomm/servers/jainslee/core/fault-tolerant-ra-api/" + RESTCOMM_FT_RA_VERSION + "/fault-tolerant-ra-api-" + RESTCOMM_FT_RA_VERSION + ".jar");
 
   public ProjectWizard() {
     super();
@@ -103,7 +103,7 @@ public class ProjectWizard extends Wizard implements INewWizard {
       createMavenPomFile(project, monitor);
       monitor.worked(1);
 
-      // After creating POMs we try classpath with mobicents:eclipse
+      // After creating POMs we try classpath with restcomm:eclipse
       configureClasspath(project, monitor);
       monitor.worked(1);
 
@@ -208,17 +208,17 @@ public class ProjectWizard extends Wizard implements INewWizard {
   }
 
   private void configureClasspath(final IProject project, IProgressMonitor monitor) throws CoreException {
-    // Let's try with mobicents:eclipse first...
+    // Let's try with restcomm:eclipse first...
     MavenExecutionResult mavenResult = null;
     try {
-      mavenResult = MavenProjectUtils.runMavenTask(project.getFile("pom.xml"), new String[]{"mobicents:eclipse"}, monitor);
+      mavenResult = MavenProjectUtils.runMavenTask(project.getFile("pom.xml"), new String[]{"restcomm:eclipse"}, monitor);
     }
     catch (Exception e) {
       // ignore
     }
 
     if(mavenResult == null || mavenResult.hasExceptions()) {
-      // Fallback to manually created since mobicents:eclipse failed
+      // Fallback to manually created since restcomm:eclipse failed
       IJavaProject javaProject = JavaCore.create(project);
       IPath path = project.getFullPath().append("/target/classes");
       javaProject.setOutputLocation(path, null);
@@ -243,9 +243,9 @@ public class ProjectWizard extends Wizard implements INewWizard {
       if (projectUseExtensions) {
         entries[n++] = JavaCore.newVariableEntry(new Path(SLEE_EXT_1_1_JAR.toOSString()), null /* No available source */, null /* hell knows */);
       }
-      // If we have an RA, we are using Mobicents FT RA API
+      // If we have an RA, we are using Restcomm FT RA API
       if (hasRA) {
-        entries[n++] = JavaCore.newVariableEntry(new Path(MOBICENTS_FT_RA_JAR.toOSString()), null /* No available source */, null /* hell knows */);
+        entries[n++] = JavaCore.newVariableEntry(new Path(RESTCOMM_FT_RA_JAR.toOSString()), null /* No available source */, null /* hell knows */);
       }
 
       javaProject.setRawClasspath(entries, null);

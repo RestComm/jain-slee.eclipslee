@@ -87,7 +87,7 @@ public class EditSbbClassesAction implements IObjectActionDelegate {
 				String baseName = sbbAbstractClassName.substring(sbbAbstractClassName.lastIndexOf(".") + 1);
 				baseName = baseName.substring(0, baseName.indexOf("Sbb"));
 
-        // Are we using Mobicents JAIN SLEE 1.1 Extensions ?
+        // Are we using Restcomm JAIN SLEE 1.1 Extensions ?
         boolean useExt = MavenProjectUtils.useExtensions(abstractFile.getProject());
 
         HashMap subs = new HashMap();		
@@ -112,7 +112,7 @@ public class EditSbbClassesAction implements IObjectActionDelegate {
 					if (createLocalInterface) {					
 						// Create a new local interface file
 						FileUtil.createFromTemplate(xmlFile.getProject(), srcFolder.append(localInterfacePath), new Path(SbbWizard.SBB_LOCAL_TEMPLATE), subs, monitor);
-						// Workaround for http://code.google.com/p/mobicents/issues/detail?id=2548, it's already present...
+						// Workaround for http://code.google.com/p/restcomm/issues/detail?id=2548, it's already present...
 		        // FileUtil.createFromTemplate(xmlFile.getProject(), srcFolder.append(businessInterfacePath), new Path(SbbWizard.SBB_BUSINESS_TEMPLATE), subs, monitor);
 						// add to the xml
 						sbb.setLocalInterfaceName(localInterfaceClass);

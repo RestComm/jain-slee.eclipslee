@@ -37,7 +37,7 @@ public class ProjectModulesPage extends WizardPage {
   protected ProjectModulesPage(String pageName) {
     super(pageName);
     setTitle("JAIN SLEE Modules and Extensions");
-    setDescription("Please select the desired JAIN SLEE modules for your project and whether to use or not Mobicents JAIN SLEE 1.1. Extensions.");
+    setDescription("Please select the desired JAIN SLEE modules for your project and whether to use or not Restcomm JAIN SLEE 1.1. Extensions.");
   }
 
   public void createControl(Composite parent) {
