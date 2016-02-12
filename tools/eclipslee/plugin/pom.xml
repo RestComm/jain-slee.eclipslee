@@ -128,6 +128,21 @@
 	<repositories>
 
 		<repository>
+		   <id>restcomm-public-repository-group</id>
+		   <name>Restcomm Public Maven Repository Group</name>
+		   <url>https://oss.sonatype.org/content/groups/public</url>
+		   <layout>default</layout>
+		   <releases>
+	           <enabled>true</enabled>
+	           <updatePolicy>never</updatePolicy>
+		   </releases>
+		   <snapshots>
+	           <enabled>true</enabled>
+	           <updatePolicy>never</updatePolicy>
+		   </snapshots>
+		</repository>
+
+		<repository>
 			<id>m2eclipse</id>
 			<url>http://m2eclipse.sonatype.org/sites/m2e/</url>
 			<layout>p2</layout>
@@ -167,6 +182,5 @@
 		</repository>
 		
 	</repositories>
-	
 	
 </project>
