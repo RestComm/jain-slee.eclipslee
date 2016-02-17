@@ -5,31 +5,31 @@
         <description>Restcomm HSS Client</description>
         <groupId>org.mobicents.servers.jainslee.enablers</groupId>
         <artifactId>hss-client-sbb</artifactId>
-        <version>2.8.21</version>
+        <version>${diameter.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm SIP Publication Client</description>
         <groupId>org.mobicents.servers.jainslee.enablers</groupId>
         <artifactId>sip-publication-client-sbb</artifactId>
-        <version>2.8.20</version>
+        <version>${sip.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm SIP Subscription Client</description>
         <groupId>org.mobicents.servers.jainslee.enablers</groupId>
         <artifactId>sip-subscription-client-sbb</artifactId>
-        <version>2.8.20</version>
+        <version>${sip.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm XDM Client</description>
         <groupId>org.mobicents.servers.jainslee.enablers</groupId>
         <artifactId>xdm-client-sbb</artifactId>
-        <version>2.8.12</version>
+        <version>${xcap.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm REST Client</description>
         <groupId>org.mobicents.servers.jainslee.enablers</groupId>
         <artifactId>restcomm-slee-enabler-rest-client-sbb</artifactId>
-        <version>2.8.10</version>
+        <version>${http.version}</version>
       </dependency>
     </enablers>
     <resource-adaptor-types description="Resource Adaptor Types">
@@ -37,79 +37,79 @@
         <description>Restcomm Diameter Base</description>
         <groupId>org.mobicents.servers.diameter.resources</groupId>
         <artifactId>base-ratype</artifactId>
-        <version>2.8.21</version>
+        <version>${diameter.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm Diameter Credit-Control Application</description>
         <groupId>org.mobicents.servers.diameter.resources</groupId>
         <artifactId>cca-ratype</artifactId>
-        <version>2.8.21</version>
+        <version>${diameter.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm Diameter Cx/Dx Interface</description>
         <groupId>org.mobicents.servers.diameter.resources</groupId>
         <artifactId>cx-dx-ratype</artifactId>
-        <version>2.8.21</version>
+        <version>${diameter.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm Diameter Gx Interface</description>
         <groupId>org.mobicents.servers.diameter.resources</groupId>
         <artifactId>gx-ratype</artifactId>
-        <version>2.8.21</version>
+        <version>${diameter.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm Diameter Rf Interface</description>
         <groupId>org.mobicents.servers.diameter.resources</groupId>
         <artifactId>rf-ratype</artifactId>
-        <version>2.8.21</version>
+        <version>${diameter.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm Diameter Ro Interface</description>
         <groupId>org.mobicents.servers.diameter.resources</groupId>
         <artifactId>ro-ratype</artifactId>
-        <version>2.8.21</version>
+        <version>${diameter.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm Diameter Sh Client Interface</description>
         <groupId>org.mobicents.servers.diameter.resources</groupId>
         <artifactId>sh-client-ratype</artifactId>
-        <version>2.8.21</version>
+        <version>${diameter.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm Diameter Sh Server Interface</description>
         <groupId>org.mobicents.servers.diameter.resources</groupId>
         <artifactId>sh-server-ratype</artifactId>
-        <version>2.8.21</version>
+        <version>${diameter.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm Diameter Gq Interface</description>
         <groupId>org.mobicents.servers.diameter.resources</groupId>
         <artifactId>gq-ratype</artifactId>
-        <version>2.8.21</version>
+        <version>${diameter.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm Diameter Rx Interface</description>
         <groupId>org.mobicents.servers.diameter.resources</groupId>
         <artifactId>rx-ratype</artifactId>
-        <version>2.8.21</version>
+        <version>${diameter.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm Diameter S6a Interface</description>
         <groupId>org.mobicents.servers.diameter.resources</groupId>
         <artifactId>s6a-ratype</artifactId>
-        <version>2.8.21</version>
+        <version>${diameter.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm HTTP Client</description>
         <groupId>org.mobicents.resources</groupId>
         <artifactId>http-client-ratype</artifactId>
-        <version>2.8.10</version>
+        <version>${http.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm HTTP Servlet</description>
         <groupId>org.mobicents.resources</groupId>
         <artifactId>http-servlet-ratype</artifactId>
-        <version>2.8.10</version>
+        <version>${http.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm JCC</description>
@@ -121,55 +121,55 @@
         <description>Restcomm JDBC</description>
         <groupId>org.mobicents.resources</groupId>
         <artifactId>restcomm-slee-ra-jdbc-ratype</artifactId>
-        <version>2.8.10</version>
+        <version>${jdbc.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm MAP</description>
         <groupId>org.mobicents.resources</groupId>
         <artifactId>restcomm-slee-ra-map-ratype</artifactId>
-        <version>2.8.25</version>
+        <version>${ss7.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm MGCP</description>
         <groupId>org.mobicents.resources</groupId>
         <artifactId>mgcp-ratype</artifactId>
-        <version>2.8.15</version>
+        <version>${media.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm MSControl</description>
         <groupId>org.mobicents.resources</groupId>
         <artifactId>restcomm-slee-ra-mscontrol-ratype</artifactId>
-        <version>2.8.15</version>
+        <version>${media.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm SIP11</description>
         <groupId>org.mobicents.resources</groupId>
         <artifactId>sip11-ratype</artifactId>
-        <version>2.8.20</version>
+        <version>${sip.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm SMPP5</description>
         <groupId>org.mobicents.resources</groupId>
         <artifactId>smpp5-ratype</artifactId>
-        <version>2.8.10</version>
+        <version>${smpp.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm TFTP Server</description>
         <groupId>org.mobicents.resources</groupId>
         <artifactId>restcomm-slee-ra-tftp-server-ratype</artifactId>
-        <version>2.8.9</version>
+        <version>${tftp.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm XCAP Client</description>
         <groupId>org.mobicents.resources</groupId>
         <artifactId>restcomm-slee-ra-xcap-client-ratype</artifactId>
-        <version>2.8.12</version>
+        <version>${xcap.version}</version>
       </dependency>
       <dependency>
         <description>Restcomm XMPP</description>
         <groupId>org.mobicents.resources</groupId>
         <artifactId>restcomm-slee-ra-xmpp-ratype</artifactId>
-        <version>2.8.9</version>
+        <version>${xmpp.version}</version>
       </dependency>
     </resource-adaptor-types>
     <libraries description="JAIN SLEE Libraries"/>
