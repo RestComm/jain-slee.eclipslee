@@ -64,7 +64,7 @@ public class WaitDialog extends Dialog implements IProgressMonitor{
 	 */
 	protected void configureShell(Shell newShell) {
 		super.configureShell(newShell);
-		newShell.setText("Mobicents EclipSLEE ");
+		newShell.setText("Restcomm EclipSLEE ");
 	}
 
 	public void setText(String msg) {

@@ -960,7 +960,7 @@
     <extension
           point="org.eclipse.ui.preferencePages">
       <page id="org.mobicents.eclipslee.preferences.EclipsleePreferencePage"
-            name="Mobicents EclipSLEE"
+            name="Restcomm EclipSLEE"
             class="org.mobicents.eclipslee.servicecreation.preferences.MainPreferencePage">
       </page>
     

@@ -10,7 +10,7 @@ Bundle-ClassPath: servicecreation.jar,
  lib/plexus-utils-1.4.9.jar,
  lib/xerces.jar
 Bundle-Activator: org.mobicents.eclipslee.servicecreation.ServiceCreationPlugin
-Bundle-Vendor: Mobicents
+Bundle-Vendor: Restcomm
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,

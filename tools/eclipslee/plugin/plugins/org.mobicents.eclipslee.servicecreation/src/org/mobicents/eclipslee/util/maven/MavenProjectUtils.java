@@ -137,7 +137,7 @@ public class MavenProjectUtils {
     model.setArtifactId(project.getName() != null ? project.getName() : DEFAULT_ARTIFACT_ID);
     model.setVersion(DEFAULT_VERSION);
 
-    model.setName("Mobicents :: ${project.artifactId} v${project.version}");
+    model.setName("Restcomm :: ${project.artifactId} v${project.version}");
 
     // Set child modules
     for(String module : projectModules.getModules()) {
@@ -217,7 +217,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(EVENTS_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + (customName != null ? ("-" + customName) : "") + EVENTS_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${project.artifactId} v${project.version}");
+    model.setName("Restcomm :: ${project.artifactId} v${project.version}");
 
     // Add JAIN SLEE Dependency
     addDependency(model, JAIN_SLEE_DEPENDENCY);
@@ -255,7 +255,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(SBB_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + (customName != null ? ("-" + customName) : "") + SBB_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${project.artifactId} v${project.version}");
+    model.setName("Restcomm :: ${project.artifactId} v${project.version}");
 
     // Add JAIN SLEE Dependency
     addDependency(model, JAIN_SLEE_DEPENDENCY);
@@ -307,7 +307,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(PROFILE_SPEC_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + (customName != null ? ("-" + customName) : "") + PROFILE_SPEC_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${project.artifactId} v${project.version}");
+    model.setName("Restcomm :: ${project.artifactId} v${project.version}");
 
     // Add JAIN SLEE Dependency
     addDependency(model, JAIN_SLEE_DEPENDENCY);
@@ -344,7 +344,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(RA_TYPE_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + (customName != null ? ("-" + customName) : "") + RA_TYPE_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${project.artifactId} v${project.version}");
+    model.setName("Restcomm :: ${project.artifactId} v${project.version}");
 
     // Add JAIN SLEE Dependency
     addDependency(model, JAIN_SLEE_DEPENDENCY);
@@ -389,7 +389,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(RA_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + (customName != null ? ("-" + customName) : "") + RA_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${project.artifactId} v${project.version}");
+    model.setName("Restcomm :: ${project.artifactId} v${project.version}");
 
     // Add JAIN SLEE Dependency
     addDependency(model, JAIN_SLEE_DEPENDENCY);
@@ -429,7 +429,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(LIBRARY_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + (customName != null ? ("-" + customName) : "") + LIBRARY_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${project.artifactId} v${project.version}");
+    model.setName("Restcomm :: ${project.artifactId} v${project.version}");
 
     // Add build
     Build build = new Build();
@@ -484,7 +484,7 @@ public class MavenProjectUtils {
 
     model.setArtifactId(DEPLOYABLE_UNIT_MODULE_ARTIFACT_ID_PREFIX + parent.getArtifactId() + DEPLOYABLE_UNIT_MODULE_ARTIFACT_ID_SUFFIX);
 
-    model.setName("Mobicents :: ${project.artifactId} v${project.version}");
+    model.setName("Restcomm :: ${project.artifactId} v${project.version}");
 
     // Add other modules as dependencies
     for(String projectModule : projectModules.getModules()) {

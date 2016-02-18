@@ -3,7 +3,7 @@
       id="org.mobicents.eclipslee"
       label="EclipSLEE"
       version="2.0.0.qualifier"
-      provider-name="Mobicents">
+      provider-name="Restcomm">
 
    <description>
 	EclipSLEE is a Restcomm sub-project, which provides a set of Eclipse plug-ins that increase the development productivity when writing SLEE applications.

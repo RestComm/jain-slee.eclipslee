@@ -45,7 +45,7 @@ public class MainPreferencePage extends PreferencePage implements IWorkbenchPref
 
   protected Control createContents(Composite parent) {
     // just to inform that it was left empty on purpose..
-    new Label(parent, SWT.NONE).setText("Mobicents EclipSLEE Main Preferences will be displayed here when available.");
+    new Label(parent, SWT.NONE).setText("Restcomm EclipSLEE Main Preferences will be displayed here when available.");
     
     return parent.getShell();
   }

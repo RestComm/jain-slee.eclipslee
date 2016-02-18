@@ -9,7 +9,7 @@
 	<para>In order to create a Deployable Unit, the Restcomm Deployable Unit Plugin for Maven is to be used. Unfortunately the EclipSLEE plugin is not yet integrated with third-party Maven tools, and so this must be made manually.</para>
 	<important>
 		<title>Requirements</title>
-		<para>For this to work, Maven must be installed and JBOSS_HOME env var set to point to where Mobicents' JBoss AS is installed. See <xref linkend="jboss_home_setup" /> on how to do this.</para>
+		<para>For this to work, Maven must be installed and JBOSS_HOME env var set to point to where Restcomm' JBoss AS is installed. See <xref linkend="jboss_home_setup" /> on how to do this.</para>
 	</important>
 	<para>In a terminal window, head to the project folder and run the following command: <command>mvn clean install</command>.</para>
 	<para>
