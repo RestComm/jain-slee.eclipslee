@@ -766,7 +766,7 @@
          <action         
             id="org.mobicents.eclipslee.servicecreation.PomXML.Menu.AddMavenDependency"
             style="push"
-            icon="icons/restcomm/mobicents_icon_16x16.png"
+            icon="icons/restcomm/restcomm_icon_16x16.png"
             class="org.mobicents.eclipslee.servicecreation.popup.actions.AddMavenDependencyAction"
             menubarPath="additions"
             enablesFor="1"
@@ -775,7 +775,7 @@
          <action         
             id="org.mobicents.eclipslee.servicecreation.PomXML.Menu.RemoveMavenDependency"
             style="pulldown"
-            icon="icons/restcomm/mobicents_icon_16x16.png"
+            icon="icons/restcomm/restcomm_icon_16x16.png"
             class="org.mobicents.eclipslee.servicecreation.popup.actions.DeleteMavenDependencySubmenu"
             menubarPath="additions"
             enablesFor="1"
@@ -811,7 +811,7 @@
          <action
                class="org.mobicents.eclipslee.servicecreation.popup.actions.DeleteModuleSubmenu"
                enablesFor="1"
-               icon="icons/restcomm/mobicents_icon_16x16.png"
+               icon="icons/restcomm/restcomm_icon_16x16.png"
                id="org.mobicents.eclipslee.servicecreation.Modules.Menu.Delete"
                label="Delete Module"
                menubarPath="additions"
@@ -820,7 +820,7 @@
          <action
                class="org.mobicents.eclipslee.servicecreation.popup.actions.EditModuleSubmenu"
                enablesFor="1"
-               icon="icons/restcomm/mobicents_icon_16x16.png"
+               icon="icons/restcomm/restcomm_icon_16x16.png"
                id="org.mobicents.eclipslee.servicecreation.Modules.Menu.Edit"
                label="Edit Module"
                menubarPath="additions"
@@ -829,7 +829,7 @@
          <action
                class="org.mobicents.eclipslee.servicecreation.popup.actions.AddModuleSubmenu"
                enablesFor="1"
-               icon="icons/restcomm/mobicents_icon_16x16.png"
+               icon="icons/restcomm/restcomm_icon_16x16.png"
                id="org.mobicents.eclipslee.servicecreation.Modules.Menu.Add"
                label="Add Module"
                menubarPath="additions"
@@ -855,7 +855,7 @@
             objectClass="org.eclipse.core.resources.IResource">
          <menu
           id="org.mobicents.eclipslee.servicecreation.Wizards.Menu"
-          icon="icons/restcomm/mobicents_icon_16x16.png"
+          icon="icons/restcomm/restcomm_icon_16x16.png"
           path="additions"
           label="EclipSLEE">
           <separator name="FirstGroup"/>

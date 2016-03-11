@@ -1,7 +1,7 @@
 __PACKAGE__
 
 import javax.slee.*;
-__IMPORT_MOBICENTS_EXTENSIONS__
+__IMPORT_RESTCOMM_EXTENSIONS__
 public abstract class __NAME__Sbb implements Sbb__BUSINESS_IFACE_NAME__ {
 
 __EVENT_HANDLERS__
