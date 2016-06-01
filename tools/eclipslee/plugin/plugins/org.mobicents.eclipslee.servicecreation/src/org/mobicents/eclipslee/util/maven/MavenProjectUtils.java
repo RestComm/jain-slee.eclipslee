@@ -82,18 +82,18 @@ public class MavenProjectUtils {
   static {
     RESTCOMM_PARENT.setGroupId("org.mobicents");
     RESTCOMM_PARENT.setArtifactId("restcomm-parent");
-    RESTCOMM_PARENT.setVersion("2.21");
+    RESTCOMM_PARENT.setVersion("2.27.47");
 
     JAIN_SLEE_DEPENDENCY.setGroupId("javax.slee");
     JAIN_SLEE_DEPENDENCY.setArtifactId("jain-slee");
     
     JAIN_SLEE_EXT_DEPENDENCY.setGroupId("org.mobicents.servers.jainslee.api");
     JAIN_SLEE_EXT_DEPENDENCY.setArtifactId("jain-slee-11-ext");
-    JAIN_SLEE_EXT_DEPENDENCY.setVersion("1.0.0.FINAL");
+    JAIN_SLEE_EXT_DEPENDENCY.setVersion("2.8.69");
 
     RESTCOMM_FT_RA_DEPENDENCY.setGroupId("org.mobicents.servers.jainslee.core");
     RESTCOMM_FT_RA_DEPENDENCY.setArtifactId("fault-tolerant-ra-api");
-    RESTCOMM_FT_RA_DEPENDENCY.setVersion("2.6.0.FINAL");
+    RESTCOMM_FT_RA_DEPENDENCY.setVersion("2.8.69");
   }
 
   public static void generateMavenPomFiles(IProject project, ProjectModules projectModules) {
