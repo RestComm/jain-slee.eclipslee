@@ -112,12 +112,6 @@
         <version>${http.version}</version>
       </dependency>
       <dependency>
-        <description>Restcomm JCC</description>
-        <groupId>org.mobicents.resources</groupId>
-        <artifactId>jcc-ratype</artifactId>
-        <version>2.7.0.FINAL</version>
-      </dependency>
-      <dependency>
         <description>Restcomm JDBC</description>
         <groupId>org.mobicents.resources</groupId>
         <artifactId>restcomm-slee-ra-jdbc-ratype</artifactId>

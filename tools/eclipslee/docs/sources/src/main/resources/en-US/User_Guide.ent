@@ -18,6 +18,6 @@ If this final separator is missing, then the documentation will be wrong. -->
 <!ENTITY HOLDER "Red Hat Inc">
 <!ENTITY AUTHOR.EMAIL.IVELIN "${author.email.ivelin}">
 <!ENTITY AUTHOR.EMAIL.EDUARDO "${author.email.eduardo}">
-<!ENTITY AUTHOR.EMAIL.ALEX "${author.email.alex}">
+<!ENTITY AUTHOR.EMAIL.ALEX "${author.email.alexandre}">
 <!ENTITY AUTHOR.EMAIL.AMIT "${author.email.amit}">
 <!ENTITY AUTHOR.EMAIL.BARTOSZ "${author.email.bartosz}">
